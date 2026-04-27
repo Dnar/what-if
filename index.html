@@ -1,10 +1,9 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Пойдём...</title>
+  <title>Лер, пойдем погуляем</title>
   <meta name="description" content="A small invitation page with Berlin sunsets." />
   <style>
     :root {
@@ -15,9 +14,7 @@
       --line: rgba(255, 255, 255, 0.20);
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -89,10 +86,7 @@
       transition: transform 180ms ease, background 180ms ease;
     }
 
-    .cta:hover {
-      transform: translateY(-2px);
-      background: rgba(255, 255, 255, 0.18);
-    }
+    .cta:hover { transform: translateY(-2px); background: rgba(255, 255, 255, 0.18); }
 
     .gallery {
       display: grid;
@@ -120,9 +114,7 @@
       transition: transform 900ms ease;
     }
 
-    .photo-card:hover img {
-      transform: scale(1.045);
-    }
+    .photo-card:hover img { transform: scale(1.045); }
 
     .note {
       margin: 26px auto 0;
@@ -134,44 +126,26 @@
     }
 
     @keyframes rise {
-      from {
-        opacity: 0;
-        transform: translateY(18px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @media (max-width: 760px) {
-      main {
-        width: min(100% - 22px, 1100px);
-        padding-top: 28px;
-      }
-
-      .hero {
-        min-height: 62vh;
-      }
-
-      .gallery {
-        grid-template-columns: 1fr;
-      }
-
-      .photo-card {
-        min-height: 260px;
-      }
+      main { width: min(100% - 22px, 1100px); padding-top: 28px; }
+      .hero { min-height: 62vh; }
+      .gallery { grid-template-columns: 1fr; }
+      .photo-card { min-height: 260px; }
     }
   </style>
 </head>
-
 <body>
   <main>
     <section class="hero" aria-label="Invitation">
       <div class="hero-inner">
-        <h1>посмотрим как меняется небо?</h1>
-        <!-- <p class="subtitle">Выберем место и просто посмотрим, как меняется небо?</p> -->
+        <p class="eyebrow">· Берлин ·</p>
+        <h1>А что если?</h1>
+        <p class="subtitle">А что если мы выберем место и будем наблюдать, как небо меняет цвет?</p>
+        <a class="cta" href="#sunsets">click ↓</a>
       </div>
     </section>
 
@@ -184,8 +158,7 @@
       </div>
     </section>
 
-    <p class="note">Хотел оригинально пригласить тебя на прогулку. В итоге не придумал ничего лучше, чем сделать это лично</p>
+    <p class="note">No fixed plan. Just a sunset, a walk, and maybe dinner after.</p>
   </main>
 </body>
-
 </html>
