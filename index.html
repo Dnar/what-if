@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>What if?</title>
+  <meta name="description" content="A small invitation page with Berlin sunsets." />
+  <style>
+    :root {
+      --bg: #100f18;
+      --text: #fff7ed;
+      --muted: rgba(255, 247, 237, 0.72);
+      --card: rgba(255, 255, 255, 0.10);
+      --line: rgba(255, 255, 255, 0.20);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 18% 12%, rgba(255, 140, 87, 0.32), transparent 34%),
+        radial-gradient(circle at 82% 4%, rgba(255, 197, 92, 0.20), transparent 28%),
+        linear-gradient(180deg, #120f1d 0%, #1b1226 46%, #08070d 100%);
+    }
+
+    main {
+      width: min(1100px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 56px 0 72px;
+    }
+
+    .hero {
+      min-height: 68vh;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 40px 0;
+    }
+
+    .hero-inner {
+      max-width: 760px;
+      animation: rise 900ms ease both;
+    }
+
+    .eyebrow {
+      margin: 0 0 18px;
+      font-size: 14px;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    h1 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(70px, 16vw, 170px);
+      line-height: 0.9;
+      font-weight: 500;
+      letter-spacing: -0.07em;
+    }
+
+    .subtitle {
+      margin: 28px auto 0;
+      max-width: 620px;
+      font-size: clamp(18px, 2.6vw, 28px);
+      line-height: 1.35;
+      color: var(--muted);
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 34px;
+      padding: 14px 22px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.12);
+      color: var(--text);
+      text-decoration: none;
+      backdrop-filter: blur(18px);
+      transition: transform 180ms ease, background 180ms ease;
+    }
+
+    .cta:hover {
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.18);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .photo-card {
+      position: relative;
+      overflow: hidden;
+      min-height: 320px;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background: var(--card);
+      box-shadow: 0 24px 90px rgba(0, 0, 0, 0.35);
+    }
+
+    .photo-card:nth-child(1) {
+      grid-column: span 7;
+    }
+
+    .photo-card:nth-child(2) {
+      grid-column: span 5;
+    }
+
+    .photo-card:nth-child(3) {
+      grid-column: span 5;
+    }
+
+    .photo-card:nth-child(4) {
+      grid-column: span 7;
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: 100%;
+      min-height: 320px;
+      object-fit: cover;
+      display: block;
+      filter: saturate(1.06) contrast(1.03);
+      transition: transform 900ms ease;
+    }
+
+    .photo-card:hover img {
+      transform: scale(1.045);
+    }
+
+    .caption {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 18px;
+      padding: 14px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 18px;
+      background: rgba(0, 0, 0, 0.28);
+      backdrop-filter: blur(18px);
+      color: rgba(255, 255, 255, 0.88);
+      font-size: 15px;
+    }
+
+    .note {
+      margin: 26px auto 0;
+      max-width: 740px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.55;
+    }
+
+    @keyframes rise {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 760px) {
+      main {
+        width: min(100% - 22px, 1100px);
+        padding-top: 28px;
+      }
+
+      .hero {
+        min-height: 62vh;
+      }
+
+      .photo-card,
+      .photo-card:nth-child(n) {
+        grid-column: 1 / -1;
+        min-height: 270px;
+      }
+
+      .photo-card img {
+        min-height: 270px;
+      }
+
+      .caption {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <section class="hero" aria-label="Invitation">
+      <div class="hero-inner">
+        <p class="eyebrow">Berlin · sunset · one evening</p>
+        <h1>What if?</h1>
+        <p class="subtitle">What if we picked a place, watched the sky change color, and let the evening decide the
+          rest?</p>
+        <a class="cta" href="#sunsets" aria-label="Open the sunset gallery">See the sunsets ↓</a>
+      </div>
+    </section>
+
+    <section id="sunsets" class="gallery" aria-label="Berlin sunset photos">
+      <article class="photo-card">
+        <img src="https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&w=1400&q=85"
+          alt="Berlin skyline at sunset" />
+        <div class="caption">A soft evening over Berlin.</div>
+      </article>
+      <article class="photo-card">
+        <img src="https://images.unsplash.com/photo-1560969184-10fe8719e047?auto=format&fit=crop&w=1200&q=85"
+          alt="Berlin TV Tower during golden hour" />
+        <div class="caption">Golden hour near the TV Tower.</div>
+      </article>
+      <article class="photo-card">
+        <img src="https://images.unsplash.com/photo-1570963454329-c0c76569f187?auto=format&fit=crop&w=1200&q=85"
+          alt="River Spree in Berlin at dusk" />
+        <div class="caption">A walk by the Spree.</div>
+      </article>
+      <article class="photo-card">
+        <img src="https://images.unsplash.com/photo-1546726747-421c6d69c929?auto=format&fit=crop&w=1400&q=85"
+          alt="Brandenburg Gate in Berlin at sunset" />
+        <div class="caption">One city, one evening, one question.</div>
+      </article>
+    </section>
+
+    <p class="note">No fixed plan. Just a sunset, a walk, and maybe dinner after.</p>
+  </main>
+</body>
+
+</html>
