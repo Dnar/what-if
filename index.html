@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -15,9 +14,7 @@
       --line: rgba(255, 255, 255, 0.20);
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -89,10 +86,7 @@
       transition: transform 180ms ease, background 180ms ease;
     }
 
-    .cta:hover {
-      transform: translateY(-2px);
-      background: rgba(255, 255, 255, 0.18);
-    }
+    .cta:hover { transform: translateY(-2px); background: rgba(255, 255, 255, 0.18); }
 
     .gallery {
       display: grid;
@@ -111,21 +105,10 @@
       box-shadow: 0 24px 90px rgba(0, 0, 0, 0.35);
     }
 
-    .photo-card:nth-child(1) {
-      grid-column: span 7;
-    }
-
-    .photo-card:nth-child(2) {
-      grid-column: span 5;
-    }
-
-    .photo-card:nth-child(3) {
-      grid-column: span 5;
-    }
-
-    .photo-card:nth-child(4) {
-      grid-column: span 7;
-    }
+    .photo-card:nth-child(1) { grid-column: span 7; }
+    .photo-card:nth-child(2) { grid-column: span 5; }
+    .photo-card:nth-child(3) { grid-column: span 5; }
+    .photo-card:nth-child(4) { grid-column: span 7; }
 
     .photo-card img {
       width: 100%;
@@ -137,9 +120,7 @@
       transition: transform 900ms ease;
     }
 
-    .photo-card:hover img {
-      transform: scale(1.045);
-    }
+    .photo-card:hover img { transform: scale(1.045); }
 
     .caption {
       position: absolute;
@@ -165,81 +146,50 @@
     }
 
     @keyframes rise {
-      from {
-        opacity: 0;
-        transform: translateY(18px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @media (max-width: 760px) {
-      main {
-        width: min(100% - 22px, 1100px);
-        padding-top: 28px;
-      }
-
-      .hero {
-        min-height: 62vh;
-      }
-
-      .photo-card,
-      .photo-card:nth-child(n) {
-        grid-column: 1 / -1;
-        min-height: 270px;
-      }
-
-      .photo-card img {
-        min-height: 270px;
-      }
-
-      .caption {
-        font-size: 14px;
-      }
+      main { width: min(100% - 22px, 1100px); padding-top: 28px; }
+      .hero { min-height: 62vh; }
+      .photo-card, .photo-card:nth-child(n) { grid-column: 1 / -1; min-height: 270px; }
+      .photo-card img { min-height: 270px; }
+      .caption { font-size: 14px; }
     }
   </style>
 </head>
-
 <body>
   <main>
     <section class="hero" aria-label="Invitation">
       <div class="hero-inner">
         <p class="eyebrow">Berlin · sunset · one evening</p>
         <h1>What if?</h1>
-        <p class="subtitle">What if we picked a place, watched the sky change color, and let the evening decide the
-          rest?</p>
+        <p class="subtitle">What if we picked a place and watched the sky change colour?</p>
         <a class="cta" href="#sunsets" aria-label="Open the sunset gallery">See the sunsets ↓</a>
       </div>
     </section>
 
     <section id="sunsets" class="gallery" aria-label="Berlin sunset photos">
       <article class="photo-card">
-        <img src="https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&w=1400&q=85"
-          alt="Berlin skyline at sunset" />
-        <div class="caption">A soft evening over Berlin.</div>
+        <img src="https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&w=1400&q=85" alt="Berlin skyline at sunset" />
+        
       </article>
       <article class="photo-card">
-        <img src="https://images.unsplash.com/photo-1560969184-10fe8719e047?auto=format&fit=crop&w=1200&q=85"
-          alt="Berlin TV Tower during golden hour" />
-        <div class="caption">Golden hour near the TV Tower.</div>
+        <img src="https://images.unsplash.com/photo-1560969184-10fe8719e047?auto=format&fit=crop&w=1200&q=85" alt="Berlin TV Tower during golden hour" />
+        
       </article>
       <article class="photo-card">
-        <img src="https://images.unsplash.com/photo-1570963454329-c0c76569f187?auto=format&fit=crop&w=1200&q=85"
-          alt="River Spree in Berlin at dusk" />
-        <div class="caption">A walk by the Spree.</div>
+        <img src="https://images.unsplash.com/photo-1570963454329-c0c76569f187?auto=format&fit=crop&w=1200&q=85" alt="River Spree in Berlin at dusk" />
+        
       </article>
       <article class="photo-card">
-        <img src="https://images.unsplash.com/photo-1546726747-421c6d69c929?auto=format&fit=crop&w=1400&q=85"
-          alt="Brandenburg Gate in Berlin at sunset" />
-        <div class="caption">One city, one evening, one question.</div>
+        <img src="https://images.unsplash.com/photo-1546726747-421c6d69c929?auto=format&fit=crop&w=1400&q=85" alt="Brandenburg Gate in Berlin at sunset" />
+        
       </article>
     </section>
 
     <p class="note">No fixed plan. Just a sunset, a walk, and maybe dinner after.</p>
   </main>
 </body>
-
 </html>
